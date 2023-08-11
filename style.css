@@ -1,10 +1,10 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     min-height: 100vh;
     width: 100vw;
     display: flex;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -22,12 +22,12 @@
     margin: 20px auto;
 }
 
-.main h1{
+.main h1 {
     font-size: 54px;
     color: whitesmoke;
 }
 
-.main h2{
+.main h2 {
     display: inline-block;
     background: violet;
     border-radius: 20px;
@@ -35,9 +35,10 @@
     padding: 12px 5px;
 }
 
-button{
-    margin: 6px;;
-    width:12rem;
+button {
+    margin: 6px;
+    ;
+    width: 12rem;
     padding: 12px 5px;
     border-radius: 20px;
     border: none;
@@ -45,22 +46,24 @@ button{
     box-shadow: 1px 1px 3px black;
 }
 
-#pauseGame{
+#pauseGame {
     display: none;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
-.grid{
+
+.grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 600px;
     width: 600px;
-    margin-right: 120px;
+    margin-right: 50px;
 }
-.square{
+
+.square {
     width: 180px;
     height: 170px;
     border: 1px solid black;
@@ -68,7 +71,24 @@ button:hover{
     margin: 10px;
 }
 
-.mole{
+.mole {
     background: url('Assets/mole.png');
     background-size: cover;
+}
+
+@media (max-width: 995px) {
+    .container {
+        flex-direction: column;
+    }
+    .grid {
+        height: 450px;
+        width: 450px;
+        justify-content: center;
+        align-items: center;
+    }
+    .square {
+        width: 100px;
+        height: 100px;
+        margin: 7px;
+    }
 }
